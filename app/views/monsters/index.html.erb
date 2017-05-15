@@ -29,7 +29,7 @@
         <td><%= link_to 'Show', monster %></td>
         <td><%= link_to 'Edit', edit_monster_path(monster) %></td>
         <td><%= link_to 'Destroy', monster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= link_to 'Clone', "#{monster.id}/clone" %></td>
+        <td><%= link_to 'Clone', "monsters/#{monster.id}/clone" %></td>
       </tr>
     <% end %>
   </tbody>
