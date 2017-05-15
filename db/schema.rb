@@ -10,9 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170515204341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "lands", force: :cascade do |t|
+    t.string   "lname"
+    t.text     "ldesc"
+    t.integer  "idl"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "monsters", force: :cascade do |t|
+    t.string   "mname"
+    t.text     "mdesc"
+    t.integer  "mstrenght"
+    t.integer  "mhealth"
+    t.integer  "wid"
+    t.integer  "lid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "witchers", force: :cascade do |t|
+    t.string   "wname"
+    t.text     "wdesc"
+    t.integer  "wstrenght"
+    t.integer  "whealth"
+    t.integer  "lid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "idw"
+  end
 
 end

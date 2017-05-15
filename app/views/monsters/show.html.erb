@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Mname:</strong>
+  <%= @monster.mname %>
+</p>
+
+<p>
+  <strong>Mdesc:</strong>
+  <%= @monster.mdesc %>
+</p>
+
+<p>
+  <strong>Mstrenght:</strong>
+  <%= @monster.mstrenght %>
+</p>
+
+<p>
+  <strong>Mhealth:</strong>
+  <%= @monster.mhealth %>
+</p>
+
+<p>
+  <strong>Wid:</strong>
+  <%= @monster.wid %>
+</p>
+
+<p>
+  <strong>Lid:</strong>
+  <%= @monster.lid %>
+</p>
+
+<%= link_to 'Edit', edit_monster_path(@monster) %> |
+<%= link_to 'Back', monsters_path %>

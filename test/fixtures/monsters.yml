@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mname: MyString
+  mdesc: MyText
+  mstrenght: 1
+  mhealth: 1
+  wid: 1
+  lid: 1
+
+two:
+  mname: MyString
+  mdesc: MyText
+  mstrenght: 1
+  mhealth: 1
+  wid: 1
+  lid: 1

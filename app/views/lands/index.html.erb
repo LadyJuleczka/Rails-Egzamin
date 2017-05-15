@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lands</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lname</th>
+      <th>Ldesc</th>
+      <th>Idl</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lands.each do |land| %>
+      <tr>
+        <td><%= land.lname %></td>
+        <td><%= land.ldesc %></td>
+        <td><%= land.idl %></td>
+        <td><%= link_to 'Show', land %></td>
+        <td><%= link_to 'Edit', edit_land_path(land) %></td>
+        <td><%= link_to 'Destroy', land, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Land', new_land_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lname:</strong>
+  <%= @land.lname %>
+</p>
+
+<p>
+  <strong>Ldesc:</strong>
+  <%= @land.ldesc %>
+</p>
+
+<p>
+  <strong>Idl:</strong>
+  <%= @land.idl %>
+</p>
+
+<%= link_to 'Edit', edit_land_path(@land) %> |
+<%= link_to 'Back', lands_path %>

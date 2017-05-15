@@ -1,0 +1,42 @@
+<%= form_for(witcher) do |f| %>
+  <% if witcher.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(witcher.errors.count, "error") %> prohibited this witcher from being saved:</h2>
+
+      <ul>
+      <% witcher.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :wname %>
+    <%= f.text_field :wname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wdesc %>
+    <%= f.text_area :wdesc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wstrenght %>
+    <%= f.number_field :wstrenght %>
+  </div>
+
+  <div class="field">
+    <%= f.label :whealth %>
+    <%= f.number_field :whealth %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lid %>
+    <%= f.number_field :lid %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

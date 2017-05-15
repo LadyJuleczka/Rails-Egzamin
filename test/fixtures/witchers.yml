@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wname: MyString
+  wdesc: MyText
+  wstrenght: 1
+  whealth: 1
+  lid: 1
+
+two:
+  wname: MyString
+  wdesc: MyText
+  wstrenght: 1
+  whealth: 1
+  lid: 1

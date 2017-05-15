@@ -1,0 +1,47 @@
+<%= form_for(monster) do |f| %>
+  <% if monster.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(monster.errors.count, "error") %> prohibited this monster from being saved:</h2>
+
+      <ul>
+      <% monster.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :mname %>
+    <%= f.text_field :mname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mdesc %>
+    <%= f.text_area :mdesc %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mstrenght %>
+    <%= f.number_field :mstrenght %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mhealth %>
+    <%= f.number_field :mhealth %>
+  </div>
+
+  <div class="field">
+    <%= f.label :wid %>
+    <%= f.number_field :wid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lid %>
+    <%= f.number_field :lid %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

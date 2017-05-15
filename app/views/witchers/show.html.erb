@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Wname:</strong>
+  <%= @witcher.wname %>
+</p>
+
+<p>
+  <strong>Wdesc:</strong>
+  <%= @witcher.wdesc %>
+</p>
+
+<p>
+  <strong>Wstrenght:</strong>
+  <%= @witcher.wstrenght %>
+</p>
+
+<p>
+  <strong>Whealth:</strong>
+  <%= @witcher.whealth %>
+</p>
+
+<p>
+  <strong>Lid:</strong>
+  <%= @witcher.lid %>
+</p>
+
+<%= link_to 'Edit', edit_witcher_path(@witcher) %> |
+<%= link_to 'Back', witchers_path %>
