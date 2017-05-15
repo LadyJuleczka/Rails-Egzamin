@@ -1,0 +1,26 @@
+<h1>Clone Monster</h1>
+<%= form_for @monster, url: '/monsters', method: :post do |f| %>
+  <div class="field">
+    <%= f.label :Monster_Name %><br>
+    <%= f.text_field :mname %>
+  </div>
+  <div class="field">
+    <%= f.label :Monster_Description %><br>
+    <%= f.text_field :mdesc %>
+  </div>
+  <div class="field">
+    <%= f.label :Monster_Strenght %><br>
+    <%= f.text_field :mstrenght %>
+  </div>
+  <div class="field">
+    <%= f.label :Witcher %><br>
+    <%= f.text_field :wid %>
+  </div>
+  <div class="field">
+    <%= f.label :Land %><br>
+    <%= f.text_field :lid %>
+  </div>
+  <div class="actions">
+    <%= f.submit "save" %><br>
+  </div>
+<% end %>

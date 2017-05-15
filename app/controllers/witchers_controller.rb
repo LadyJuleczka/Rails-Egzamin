@@ -69,6 +69,6 @@ class WitchersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def witcher_params
-      params.require(:witcher).permit(:wname, :wdesc, :wstrenght, :whealth, :lid)
+      params.require(:witcher).permit(:wname, :wdesc, :wstrenght, :whealth, :lid, :idw)
     end
 end

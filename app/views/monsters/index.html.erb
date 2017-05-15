@@ -5,10 +5,11 @@
 <table>
   <thead>
     <tr>
-      <th>Mname</th>
-      <th>Mdesc</th>
-      <th>Mstrenght</th>
-      <th>Mhealth</th>
+      <th>index</th>
+      <th>Monster name</th>
+      <th>Monser description</th>
+      <th>Monser strenght</th>
+      <th>Monser health</th>
       <th>Wid</th>
       <th>Lid</th>
       <th colspan="3"></th>
@@ -16,8 +17,9 @@
   </thead>
 
   <tbody>
-    <% @monsters.each do |monster| %>
+    <% @monsters.each_with_index do |monster, index| %>
       <tr>
+        <td><%= index + 1 %></td>
         <td><%= monster.mname %></td>
         <td><%= monster.mdesc %></td>
         <td><%= monster.mstrenght %></td>
@@ -27,6 +29,7 @@
         <td><%= link_to 'Show', monster %></td>
         <td><%= link_to 'Edit', edit_monster_path(monster) %></td>
         <td><%= link_to 'Destroy', monster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Clone', "#{monster.id}/clone" %></td>
       </tr>
     <% end %>
   </tbody>

@@ -1,6 +1,10 @@
 class MonstersController < ApplicationController
   before_action :set_monster, only: [:show, :edit, :update, :destroy]
 
+  def clone
+    @monster = Monster.find(params[:id])
+  end
+
   # GET /monsters
   # GET /monsters.json
   def index
