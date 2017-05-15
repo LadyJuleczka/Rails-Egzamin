@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :welcome
   resources :lands
   resources :witchers
   resources :monsters do
