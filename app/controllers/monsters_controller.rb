@@ -1,6 +1,6 @@
 class MonstersController < ApplicationController
   before_action :set_monster, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_admin!, only: [:new, :edit, :create, :update, :destroy]
   def clone
     @monster = Monster.find(params[:id])
   end

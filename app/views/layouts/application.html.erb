@@ -41,15 +41,22 @@
               </ul>
             </li>
           </ul>
-          <form class="navbar-form navbar-left">
+          <!-- <form class="navbar-form navbar-left">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Search">
             </div>
             <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/Credits">Credits</a></li>
-          </ul>
+          </form> -->
+          <div class="nav navbar-nav navbar-right">
+            <% if admin_signed_in? %>
+              Logged in as <strong><%= current_admin.email %></strong>.
+              <%= link_to 'Edit profile', edit_admin_registration_path, :class => 'navbar-link' %> |
+              <%= link_to "Log out", destroy_admin_session_path, method: :delete, :class => 'navbar-link'  %>
+            <% else %>
+              <%= link_to "Sign in", new_admin_registration_path, :class => 'navbar-link'  %> |
+              <%= link_to "Log in", new_admin_session_path, :class => 'navbar-link'  %>
+            <% end %>
+          </div>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
