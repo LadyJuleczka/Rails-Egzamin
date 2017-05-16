@@ -73,6 +73,6 @@ class MonstersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def monster_params
-      params.require(:monster).permit(:mname, :mdesc, :mstrenght, :mhealth, :wid, :lid)
+      params.require(:monster).permit(:mname, :mdesc, :mstrenght, :mhealth, :wid, :lid, :image)
     end
 end
