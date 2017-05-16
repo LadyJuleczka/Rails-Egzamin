@@ -4,6 +4,10 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
+  config.assets.precompile += Ckeditor.assets
+  config.assets.precompile += %w( ckeditor/* )
+  onfig.autoload_paths =+ %W(#{config.root}/app/models/cke)
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
