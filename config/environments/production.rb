@@ -6,7 +6,7 @@ Rails.application.configure do
 
   config.assets.precompile += Ckeditor.assets
   config.assets.precompile += %w( ckeditor/* )
-  onfig.autoload_paths =+ %W(#{config.root}/app/models/cke)
+  config.autoload_paths =+ %W(#{config.root}/app/models/cke)
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
