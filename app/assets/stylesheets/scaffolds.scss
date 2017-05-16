@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: #009999;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -46,7 +46,9 @@ td {
 div {
   &.field, &.actions {
     margin-bottom: 10px;
+    background-color: #85e0e0
   }
+  background-color: #33cccc
 }
 
 #notice {
@@ -74,8 +76,8 @@ div {
     font-size: 12px;
     margin: -7px;
     margin-bottom: 0;
-    background-color: #c00;
-    color: #fff;
+    background-color: #006666;
+    color: #006666;
   }
 
   ul li {
