@@ -1,34 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="col-md-3">
 
-<p>
-  <strong>Mname:</strong>
-  <%= @monster.mname %>
-</p>
+</div>
 
-<p>
-  <strong>Mdesc:</strong>
-  <%= @monster.mdesc %>
-</p>
+<div class ="col-md-9">
+  <div class ="col-md-12">
+    <h4><%= @monster.mname %></h4>
+    <hr>
+  </div>
+  <div class ="col-md-6">
+    <strong>Strenght: </strong><%= @monster.mstrenght %>
+  </div>
+  <div class ="col-md-6">
+    <strong>Health: </strong><%= @monster.mhealth %>
+  </div>
+  <div class ="col-md-12">
+      <hr>
+      <strong>Description: </strong><%= simple_format @monster.mdesc %>
+  </div>
+</div>
 
-<p>
-  <strong>Mstrenght:</strong>
-  <%= @monster.mstrenght %>
-</p>
 
-<p>
-  <strong>Mhealth:</strong>
-  <%= @monster.mhealth %>
-</p>
-
-<p>
-  <strong>Wid:</strong>
-  <%= @monster.wid %>
-</p>
-
-<p>
-  <strong>Lid:</strong>
-  <%= @monster.lid %>
-</p>
-
-<%= link_to 'Edit', edit_monster_path(@monster) %> |
-<%= link_to 'Back', monsters_path %>
+<center>
+  <%= link_to 'Edit', edit_monster_path(@monster) %> |
+  <%= link_to 'Back', monsters_path %>
+</center>
