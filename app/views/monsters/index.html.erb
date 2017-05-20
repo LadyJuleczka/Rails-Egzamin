@@ -41,3 +41,35 @@
       <%= will_paginate @monsters, renderer: BootstrapPagination::Rails %>
     </center>
   </div>
+
+
+
+  <h1>Witchers</h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Wname</th>
+        <th>Wdesc</th>
+        <th>Wstrenght</th>
+        <th>Whealth</th>
+        <th>Lid</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @witchers.each do |witcher| %>
+        <tr>
+          <td><%= witcher.wname %></td>
+          <td><%= witcher.wdesc %></td>
+          <td><%= witcher.wstrenght %></td>
+          <td><%= witcher.whealth %></td>
+          <td><%= witcher.lid %></td>
+          <td><%= link_to 'Show', witcher %></td>
+          <td><%= link_to 'Edit', edit_witcher_path(witcher) %></td>
+          <td><%= link_to 'Destroy', witcher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

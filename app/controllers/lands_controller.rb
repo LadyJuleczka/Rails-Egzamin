@@ -5,12 +5,14 @@ class LandsController < ApplicationController
   # GET /lands.json
   def index
     @lands = Land.all.paginate(page: params[:page], per_page: 5)
+    @monsters = Monster.all
   end
 
   # GET /lands/1
   # GET /lands/1.json
   def show
   end
+
 
   # GET /lands/new
   def new

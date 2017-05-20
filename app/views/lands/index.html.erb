@@ -23,6 +23,12 @@
         <td><%= link_to 'Destroy', land, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
+<br><br><hr>
+    <% @monsters.each do |mon| %>
+      <tr>
+        <td><%= mon.mname %></td>
+        </tr>
+    <% end %>
   </tbody>
 </table>
 

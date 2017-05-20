@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :monsters do
     member do
       get 'clone'
+      get 'findwitcher'
     end
   end
   root 'welcome#index'

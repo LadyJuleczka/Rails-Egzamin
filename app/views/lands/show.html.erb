@@ -15,5 +15,14 @@
   <%= @land.idl %>
 </p>
 
+<p>
+  <strong>Monsters:</strong>
+  <% @land.monsters.each do |mon| %>
+  <% if mon.mstrenght > 100 %>
+    <%= mon.mname %> <br>
+  <% end %>
+<% end %>
+</p>
+
 <%= link_to 'Edit', edit_land_path(@land) %> |
 <%= link_to 'Back', lands_path %>

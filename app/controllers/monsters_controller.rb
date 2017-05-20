@@ -9,11 +9,17 @@ class MonstersController < ApplicationController
   # GET /monsters.json
   def index
     @monsters = Monster.all.paginate(page: params[:page], per_page: 5)
+    @lands = Land.all
+    @witchers = Witcher.all
   end
 
   # GET /monsters/1
   # GET /monsters/1.json
   def show
+  end
+
+  def findwitcher
+    @monster = Monster.find(params[:id])
   end
 
   # GET /monsters/new
@@ -73,6 +79,6 @@ class MonstersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def monster_params
-      params.require(:monster).permit(:mname, :mdesc, :mstrenght, :mhealth, :wid, :lid, :image)
+      params.require(:monster).permit(:mname, :mdesc, :mstrenght, :mhealth, :wid, :lid, :image, :land_id)
     end
 end

@@ -38,9 +38,9 @@
   </div>
 
   <div class="field">
-    <%= f.label :lid %>
-    <%= f.number_field :lid %>
-  </div>
+    <%= f.label :land %>
+    <%= f.select :land_id, options_for_select(Land.all.map{|f|["#{f.lname}", f.id]}), class: 'text_field form-control' %>
+    </div>
 
     <div class="field">
       <%= f.label :image %>
