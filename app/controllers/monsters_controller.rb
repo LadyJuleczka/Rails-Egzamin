@@ -20,6 +20,8 @@ class MonstersController < ApplicationController
 
   def findwitcher
     @monster = Monster.find(params[:id])
+    @lands = Land.all
+    @witchers = Witcher.all
   end
 
   # GET /monsters/new

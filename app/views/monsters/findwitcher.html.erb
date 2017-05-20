@@ -1,0 +1,41 @@
+<div class="col-md-4">
+  <strong>Name: </strong><%= @monster.mname %>
+  <%= image_tag @monster.image , class: "img-responsive" %>
+  <strong>Strenght: </strong><%= @monster.mstrenght %>
+  <br>
+  <strong>Health: </strong><%= @monster.mhealth %>
+</div>
+
+<div class ="col-md-8">
+  <center>
+    <h3>Witchers located on the same ground.<br>Having enough strenght to slay this monster. </h3>
+  </center>
+  <hr>
+  <% @witchers.each do |witcher| %>
+    <% if @monster.land_id == witcher.land_id %>
+      <% if @monster.mstrenght < witcher.wstrenght %>
+        <div class ="col-md-12">
+            <h4><%= link_to witcher.wname, witcher %></h4>
+            <div class ="col-md-6">
+              <strong>Strenght: </strong><%= witcher.wstrenght %>
+            </div>
+            <div class ="col-md-6">
+              <strong>Health: </strong><%= witcher.whealth %>
+            </div>
+        </div>
+        <div class ="col-md-12">
+        <hr>
+        </div>
+    <% end %>
+  <% end %>
+<% end %>
+<hr>
+
+
+
+</div>
+
+
+<center>
+  <%= link_to 'Back', monsters_path %>
+</center>
