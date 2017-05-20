@@ -34,3 +34,6 @@
   <div class="col-md-12">
   <%= link_to 'New Monster', new_monster_path %>
   </div>
+
+
+  <%= will_paginate @monsters, renderer: BootstrapPagination::Rails %>

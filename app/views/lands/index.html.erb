@@ -29,3 +29,5 @@
 <br>
 
 <%= link_to 'New Land', new_land_path %>
+
+<%= will_paginate @lands, renderer: BootstrapPagination::Rails %>

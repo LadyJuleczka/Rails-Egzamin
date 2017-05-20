@@ -8,7 +8,7 @@ class MonstersController < ApplicationController
   # GET /monsters
   # GET /monsters.json
   def index
-    @monsters = Monster.all
+    @monsters = Monster.all.paginate(page: params[:page], per_page: 5)
   end
 
   # GET /monsters/1

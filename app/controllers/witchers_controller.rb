@@ -4,7 +4,7 @@ class WitchersController < ApplicationController
   # GET /witchers
   # GET /witchers.json
   def index
-    @witchers = Witcher.all
+    @witchers = Witcher.all.paginate(page: params[:page], per_page: 5)
   end
 
   # GET /witchers/1

@@ -4,7 +4,7 @@ class LandsController < ApplicationController
   # GET /lands
   # GET /lands.json
   def index
-    @lands = Land.all
+    @lands = Land.all.paginate(page: params[:page], per_page: 5)
   end
 
   # GET /lands/1

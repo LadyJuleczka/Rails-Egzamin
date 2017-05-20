@@ -33,3 +33,5 @@
 <br>
 
 <%= link_to 'New Witcher', new_witcher_path %>
+
+<%= will_paginate @witchers, renderer: BootstrapPagination::Rails %>

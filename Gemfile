@@ -42,6 +42,9 @@ gem 'devise', '~> 4.3.0'
 gem 'ckeditor', '~> 4.2.3'
 gem 'mini_magick', '~> 4.7.0 '
 gem 'carrierwave', '~> 1.1.0'
+gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
+gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
