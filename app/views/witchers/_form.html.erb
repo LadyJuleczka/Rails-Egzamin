@@ -35,7 +35,7 @@
     <%= f.label :land %><br>
     <%= f.select :land_id, options_for_select(Land.all.map{|f|["#{f.lname}", f.id]}), class: 'text_field form-control' %>
     </div>
-
+<br>
   <div class="actions">
     <%= f.submit %>
   </div>
