@@ -30,8 +30,13 @@
   </tbody>
 </table>
 
-<br>
+<br><br><br>
 
 <%= link_to 'New Witcher', new_witcher_path %>
 
-<%= will_paginate @witchers, renderer: BootstrapPagination::Rails %>
+<br><br>
+<div class="col-md-12">
+  <center>
+    <%= will_paginate @witchers, renderer: BootstrapPagination::Rails %>
+  </center>
+</div>

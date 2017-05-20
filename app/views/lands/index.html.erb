@@ -26,8 +26,13 @@
   </tbody>
 </table>
 
-<br>
+<br><br><br>
 
 <%= link_to 'New Land', new_land_path %>
 
-<%= will_paginate @lands, renderer: BootstrapPagination::Rails %>
+<br><br>
+<div class="col-md-12">
+  <center>
+    <%= will_paginate @lands, renderer: BootstrapPagination::Rails %>
+  </center>
+</div>
