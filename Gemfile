@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'twitter-bootstrap-rails', '~> 4.0'
 gem "less-rails"
 gem "therubyracer"
+gem 'bootstrap-sass'
 
 gem 'devise', '~> 4.3.0'
 gem 'ckeditor', '~> 4.2.3'

@@ -12,27 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :wname %>
+    <%= f.label :wname %><br>
     <%= f.text_field :wname %>
   </div>
 
   <div class="field">
-    <%= f.label :wdesc %>
+    <%= f.label :wdesc %><br>
     <%= f.text_area :wdesc %>
   </div>
 
   <div class="field">
-    <%= f.label :wstrenght %>
+    <%= f.label :wstrenght %><br>
     <%= f.number_field :wstrenght %>
   </div>
 
   <div class="field">
-    <%= f.label :whealth %>
+    <%= f.label :whealth %><br>
     <%= f.number_field :whealth %>
   </div>
 
   <div class="field">
-    <%= f.label :land %>
+    <%= f.label :land %><br>
     <%= f.select :land_id, options_for_select(Land.all.map{|f|["#{f.lname}", f.id]}), class: 'text_field form-control' %>
     </div>
 

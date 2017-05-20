@@ -12,23 +12,23 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :mname %>
+    <%= f.label :mname %><br>
     <%= f.text_field :mname %>
   </div>
 
   <div class="field">
-    <%= f.label :mdesc %>
+    <%= f.label :mdesc %><br>
     <%= f.cktext_area :mdesc %>
   </div>
 
   <div class="field">
-    <%= f.label :mstrenght %>
+    <%= f.label :mstrenght %><br>
     <%= f.number_field :mstrenght %>
   </div>
 
 
   <div class="field">
-    <%= f.label :mhealth %>
+    <%= f.label :mhealth %><br>
     <%= f.number_field :mhealth %>
   </div>
 
@@ -38,12 +38,12 @@
   </div> -->
 
   <div class="field">
-    <%= f.label :land %>
+    <%= f.label :land %><br>
     <%= f.select :land_id, options_for_select(Land.all.map{|f|["#{f.lname}", f.id]}), class: 'text_field form-control' %>
     </div>
 
     <div class="field">
-      <%= f.label :image %>
+      <%= f.label :image %><br>
       <%= f.text_field :image %>
     </div>
 

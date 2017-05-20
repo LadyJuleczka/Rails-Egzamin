@@ -11,6 +11,7 @@
         <strong>Description: </strong><%= land.ldesc %>
       </div>
       <div class="col-md-12">
+        <br>
         <%= link_to 'Show', land %>
         <%= link_to 'Edit', edit_land_path(land) %>
         <%= link_to 'Destroy', land, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -35,12 +36,3 @@
     <%= will_paginate @lands, renderer: BootstrapPagination::Rails %>
   </center>
 </div>
-
-
-<br><br><hr>
-
-    <% @monsters.each do |mon| %>
-      <tr>
-        <td><%= mon.mname %></td>
-        </tr>
-    <% end %>

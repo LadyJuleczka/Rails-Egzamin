@@ -36,6 +36,7 @@
       <%= link_to 'Edit', edit_monster_path(monster) %>
       <%= link_to 'Destroy', monster, method: :delete, data: { confirm: 'Are you sure?' } %>
       <%= link_to 'Clone', "monsters/#{monster.id}/clone" %>
+      <%= link_to 'Find Witcher', "monsters/#{monster.id}/findwitcher" %>
       </center>
       <hr>
     </div>
