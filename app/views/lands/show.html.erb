@@ -1,28 +1,31 @@
 <p id="notice"><%= notice %></p>
+<div class ="col-md-6">
+<div class ="col-md-12">
+  <h4><%= @land.lname %></h4>
+  <hr>
+</div>
+<div class ="col-md-12">
+    <strong>Description: </strong><%= simple_format @land.ldesc %>
+</div>
 
-<p>
-  <strong>Lname:</strong>
-  <%= @land.lname %>
-</p>
 
-<p>
-  <strong>Ldesc:</strong>
-  <%= @land.ldesc %>
-</p>
 
-<p>
-  <strong>Idl:</strong>
-  <%= @land.idl %>
-</p>
-
-<p>
-  <strong>Monsters:</strong>
+<div class ="col-md-6">
+  <strong>Monsters on this Land:</strong><br>
   <% @land.monsters.each do |mon| %>
-  <% if mon.mstrenght > 100 %>
     <%= mon.mname %> <br>
   <% end %>
-<% end %>
-</p>
+</div>
+<div class ="col-md-6">
+  <strong>Witchers on this Land:</strong><br>
+  <% @land.witchers.each do |witch| %>
+    <%= witch.wname %> <br>
+  <% end %>
+</div>
 
+<div class ="col-md-12">
+  <hr>
 <%= link_to 'Edit', edit_land_path(@land) %> |
 <%= link_to 'Back', lands_path %>
+</div>
+</div>

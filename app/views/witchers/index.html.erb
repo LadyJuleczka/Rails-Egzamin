@@ -1,38 +1,42 @@
 <p id="notice"><%= notice %></p>
+<center>
+<div class ="col-md-12">
+<h1>Witchers </h1>
 
-<h1>Witchers</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Wname</th>
-      <th>Wdesc</th>
-      <th>Wstrenght</th>
-      <th>Whealth</th>
-      <th>Lid</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <% @witchers.each do |witcher| %>
-      <tr>
-        <td><%= witcher.wname %></td>
-        <td><%= witcher.wdesc %></td>
-        <td><%= witcher.wstrenght %></td>
-        <td><%= witcher.whealth %></td>
-        <td><%= witcher.lid %></td>
-        <td><%= link_to 'Show', witcher %></td>
-        <td><%= link_to 'Edit', edit_witcher_path(witcher) %></td>
-        <td><%= link_to 'Destroy', witcher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+
+
+    <div class ="col-md-12">
+      <h4><%= link_to witcher.wname, witcher %></h4>
+    </div>
+    <div class ="col-md-6">
+      <strong>Description: </strong><%= witcher.wdesc %>
+    </div>
+    <div class ="col-md-6">
+      <strong>Strenght: </strong><%= witcher.wstrenght %>
+      <strong>Health: </strong><%= witcher.whealth %>
+    </div>
+
+    <div class="col-md-12">
+
+        <%= link_to 'Show', witcher %>
+        <%= link_to 'Edit', edit_witcher_path(witcher) %>
+        <%= link_to 'Destroy', witcher, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+      <hr>
+    </div>
+        <% end %>
+</div>
+</center>
+
+
+
+
 
 <br><br><br>
-
+<div class="col-md-12">
 <%= link_to 'New Witcher', new_witcher_path %>
+</div>
 
 <br><br>
 <div class="col-md-12">

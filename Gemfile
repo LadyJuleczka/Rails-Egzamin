@@ -38,6 +38,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'twitter-bootstrap-rails', '~> 4.0'
 gem "less-rails"
 gem "therubyracer"
+
 gem 'devise', '~> 4.3.0'
 gem 'ckeditor', '~> 4.2.3'
 gem 'mini_magick', '~> 4.7.0 '
@@ -45,12 +46,15 @@ gem 'carrierwave', '~> 1.1.0'
 gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.1'
 gem 'database_cleaner', '~> 1.6', '>= 1.6.1'
+gem 'ransack', '~> 1.8', '>= 1.8.2'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
 
 group :development do
+  gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem 'binding_of_caller', '~> 0.7.2'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'

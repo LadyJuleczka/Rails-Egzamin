@@ -1,6 +1,18 @@
 <p id="notice"><%= notice %></p>
+<div class ="col-md-12">
+  <%= search_form_for @search do |f| %>
+    <div class = "field">
+      <%= f.label :mname_cont, "Name contains"%>
+      <%= f.text_field :mname_cont %>
+    <div>
+      <div class = "actions">
+        <%= f.submit "Search" %>
+      <div>
+  <% end %>
+</div>
 
 <center><h1>Monsters </h1></center>
+<hr>
 
 <% @monsters.each do |monster| %>
     <div class="col-md-2">

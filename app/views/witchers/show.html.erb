@@ -1,29 +1,22 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Wname:</strong>
-  <%= @witcher.wname %>
-</p>
+  <center>
+    <div class ="col-md-12">
+    <strong>Witcher Name:</strong>
+    <%= @witcher.wname %>
+    <hr>
+  </div>
+  <div class ="col-md-6">
+    <strong>Strenght: </strong><%= @witcher.wstrenght %>
+  </div>
+  <div class ="col-md-6">
+    <strong>Health: </strong><%= @witcher.whealth %>
+  </div>
+  <div class ="col-md-12">
+      <hr>
+      <strong>Description: </strong><%= simple_format @witcher.wdesc %>
+  </div>
 
-<p>
-  <strong>Wdesc:</strong>
-  <%= @witcher.wdesc %>
-</p>
-
-<p>
-  <strong>Wstrenght:</strong>
-  <%= @witcher.wstrenght %>
-</p>
-
-<p>
-  <strong>Whealth:</strong>
-  <%= @witcher.whealth %>
-</p>
-
-<p>
-  <strong>Lid:</strong>
-  <%= @witcher.lid %>
-</p>
-
+<center>
 <%= link_to 'Edit', edit_witcher_path(@witcher) %> |
 <%= link_to 'Back', witchers_path %>
+</center>

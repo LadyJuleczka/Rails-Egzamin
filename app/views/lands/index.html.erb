@@ -1,44 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Lands</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Lname</th>
-      <th>Ldesc</th>
-      <th>Idl</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<div class ="col-md-12">
+<h1>Lands </h1>
     <% @lands.each do |land| %>
-      <tr>
-        <td><%= land.lname %></td>
-        <td><%= land.ldesc %></td>
-        <td><%= land.idl %></td>
-        <td><%= link_to 'Show', land %></td>
-        <td><%= link_to 'Edit', edit_land_path(land) %></td>
-        <td><%= link_to 'Destroy', land, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-<br><br><hr>
-    <% @monsters.each do |mon| %>
-      <tr>
-        <td><%= mon.mname %></td>
-        </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div class ="col-md-3">
+      <div class ="col-md-12">
+        <h4><%= link_to land.lname, land %></h4>
+      </div>
+      <div class ="col-md-6">
+        <strong>Description: </strong><%= land.ldesc %>
+      </div>
+      <div class="col-md-12">
+        <%= link_to 'Show', land %>
+        <%= link_to 'Edit', edit_land_path(land) %>
+        <%= link_to 'Destroy', land, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <hr>
+      </div>
+    </div>
+        <% end %>
+</div>
+
+
+
+
+
 
 <br><br><br>
-
+<div class="col-md-12">
 <%= link_to 'New Land', new_land_path %>
-
+</div>
 <br><br>
 <div class="col-md-12">
   <center>
     <%= will_paginate @lands, renderer: BootstrapPagination::Rails %>
   </center>
 </div>
+
+
+<br><br><hr>
+
+    <% @monsters.each do |mon| %>
+      <tr>
+        <td><%= mon.mname %></td>
+        </tr>
+    <% end %>
